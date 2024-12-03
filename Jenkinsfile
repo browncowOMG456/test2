@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Release') {
             steps {
-		sh 'printev'
+		sh 'printenv'
                             
 	}
         }
