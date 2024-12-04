@@ -25,6 +25,6 @@ pipeline {
         }
 	stage('Backup') {
 		steps {
-			sh 'scp output.txt jakieabedin@192.168.1.254:C:\Users\jabedin'
+			sh 'scp output.txt jakieabedin@192.168.1.254:C:Users\jabedin'
     }
 }
