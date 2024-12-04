@@ -23,9 +23,9 @@ pipeline {
                             
 	}
         }
-	stage('Backup') {
+	stage('Health Check') {
 		steps {
-			sh 'scp -P 7064 output.txt "jakieabedin@127.0.0.1:4767 :/var/jenkins_home"'
+			sh 'curl -f http://localhost:8080/health || exit 1'
 		}
 	}
     }
