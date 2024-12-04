@@ -23,10 +23,15 @@ pipeline {
                             
 	}
         }
-	stage('Health Check') {
+	stage('Memory') {
 		steps {
-			sh 'curl -f http://localhost:8080/health || exit 1'
+			sh 'free -m'
 		}
+	}
+	stage('Directory'){
+	    steps{
+		    sh 'pwd'
+	    }
 	}
     }
 }
