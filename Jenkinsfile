@@ -25,7 +25,7 @@ pipeline {
         }
 	stage('Backup') {
 		steps {
-			scp -P 7064 output.txt "jakieabedin@127.0.0.1:4767 :/C:/Users/jabedin/"
+			sh 'scp -P 7064 output.txt "jakieabedin@127.0.0.1:4767 :/C:/Users/jabedin/"'
 		}
 	}
     }
